@@ -1,0 +1,119 @@
+/* RESET */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ol, ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* GLOBAL */
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-voilet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --dark-grey: hsl(237, 12%, 33%);
+  --grey: hsl(240, 6%, 50%);
+  --light-grey: hsl(240, 5%, 91%);
+  --font-size: 12px;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+  --font-family: 'Kumbh Sans', sans-serif;
+}
+html, body, main {
+  width: 100vw;
+  height: 100vh;
+}
+h1, h2, h3, h4, h5, h6, p, a {
+  font-size: var(--dark-blue);
+  font-weight: var(--font-weight-400);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+/* INDEX */
+main {
+  background: var(--soft-voilet);
+  display: grid;
+  place-items: center;
+}
+.card {
+  margin-top: 5rem;
+  background: white;
+  max-width: 80%;
+  min-height: 80%;
+  border-radius: 20px;
+}
+.top-card-image {
+  display: block;
+  max-width: 70%;
+  margin: auto;
+  margin-top: -6rem;
+  margin-bottom: 3rem;
+}
+.container {
+  padding: 1.5rem;
+  margin: auto;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: var(--font-weight-700);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.accordion {
+  margin: auto;
+}
+.question {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.question p {
+  font-weight: var(--font-weight-700);
+  font-size: 1rem;
+}
+.arrow {
+  cursor: pointer;
+  object-fit: contain;
+}
+.answer {
+  margin-bottom: 1rem;
+}
+.answer p {
+  color: var(--dark-grey);
+  font-size: 0.8rem;
+}
+.line {
+  border: none;
+  border-top: 1px solid var(--grey);
+}
+
+/* accordion collapsed */
+.accordion.collapsed .arrow {
+    transform: rotate(180deg);
+}
+.accordion.collapsed .answer {
+  display: none;
+}
+
+/* accordion expanded */
+.accordion.expanded .arrow {
+  transform: rotate(0deg);
+}
+.accordion.expanded .answer {
+  display: block;
+}
